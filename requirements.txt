@@ -2,3 +2,6 @@ gtts
 flask
 flask-cors
 gunicorn
+deep-translator
+SpeechRecognition
+pydub
