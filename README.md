@@ -1,15 +1,36 @@
-# Text-to-Speech-NLP-Project
-## Live Demo
-Check out the live demo of the app at: [Render Live Demo](https://texttospeech-1-s3o8.onrender.com)
+# Speech-to-Text & Text-to-Speech Web App
 
+A simple web application that converts **speech to text** and **text to speech** using Python, Flask, and Google Text-to-Speech (gTTS). Users can input audio and receive text, or input text and get audio output.
 
-**PROBLEM STATEMENT**
+**Live Demo:** [https://aditya-raj4-speechtotext-trans-7.onrender.com/](#)
 
-In this project our goal is to achieve the problem of converting textual data into speech data.
+---
 
-**DESCRIPTION OVERVIEW**
+## Features
 
-As we know, some people have difficulty reading large amounts of text due to dyslexia and other learning disabilities. Some people have basic literary levels. They often get frustrated trying to browse the internet because so much of it is in text form or on other hand some people prefer to listen or watch a news article (or something like this) instead of reading. So, to solve all these problems a concept comes into mind that is” text to speech”.
-Text-to-speech (TTS) technology reads aloud digital text. It can take words on computers, smartphones, tablets and convert them into audio.
-We will be using Google Text to Speech commonly known as the gTTS API. It is very easy to use the library which converts the text entered, into an audio file which can be saved as a mp3 file. It supports several languages and the speech can be delivered in any one of the two available audio speeds, fast or slow.
+- **Speech-to-Text:** Convert audio to text.  
+- **Text-to-Speech:** Convert text to downloadable audio.  
+- **Web Interface:** Built with Flask and Flask-CORS.  
+- **Deployable:** Easy deployment on platforms like Render.
+
+---
+
+## Tech Stack
+
+- **Backend:** Python, Flask  
+- **Text-to-Speech:** gTTS (Google Text-to-Speech)  
+- **Web Framework:** Flask, Flask-CORS  
+- **Deployment:** Render, Gunicorn  
+- **Frontend (Optional):** HTML, CSS, JavaScript  
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Aditya-raj4/Aditya-raj4-speechtotext_trans.git
+cd speechtotext_trans
+
 
