@@ -5,3 +5,4 @@ gunicorn
 deep-translator
 SpeechRecognition
 pydub
+PyPDF2
