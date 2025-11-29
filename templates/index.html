@@ -370,6 +370,11 @@
 
     select.form-control {
       cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239ca3af' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 36px;
     }
 
     /* Buttons */
@@ -616,6 +621,62 @@
       }
       .container-main {
         padding-bottom: 20px;
+      }
+      
+      /* Mobile responsive fixes for select dropdowns */
+      .form-control,
+      select.form-control {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 12px 14px;
+        padding-right: 36px;
+      }
+      
+      select.form-control option {
+        font-size: 16px;
+        padding: 10px;
+      }
+      
+      /* Better spacing for mobile */
+      .pill-row .form-group {
+        margin-bottom: 12px;
+      }
+      
+      .pill-row .form-group:last-child {
+        margin-bottom: 0;
+      }
+      
+      /* Ensure labels are visible on mobile */
+      .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+        display: block;
+      }
+      
+      /* Header adjustments for mobile */
+      .header-section h1 {
+        font-size: 2rem;
+      }
+      
+      .header-section p {
+        font-size: 0.95rem;
+      }
+      
+      /* Button text sizing */
+      .btn-primary {
+        font-size: 0.95rem;
+        padding: 12px 18px;
+      }
+    }
+    
+    /* Tablet specific adjustments */
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .form-control,
+      select.form-control {
+        font-size: 15px;
+      }
+      
+      select.form-control option {
+        font-size: 15px;
       }
     }
   </style>
@@ -1019,12 +1080,20 @@ const languages = {
 $(document).ready(function() {
   const sourceSelect = $('#source_lang');
   const targetSelect = $('#target_lang');
+  
+  // Populate dropdowns
   for (const [code, name] of Object.entries(languages)) {
     sourceSelect.append(`<option value="${code}">${name}</option>`);
     targetSelect.append(`<option value="${code}">${name}</option>`);
   }
-  // set defaults
+  
+  // Set defaults with proper text display
+  sourceSelect.val('auto');
   targetSelect.val('en');
+  
+  // Force refresh to ensure selected values are visible
+  sourceSelect.trigger('change');
+  targetSelect.trigger('change');
 });
 </script>
 
